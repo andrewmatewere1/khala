@@ -1,4 +1,3 @@
-import Logo from "./Logo";
 import { BRAND } from "../data";
 import { Facebook, Twitter, Instagram, ArrowUpRight } from "lucide-react";
 
@@ -17,15 +16,15 @@ export default function Footer() {
             <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
                     <div className="lg:col-span-5">
-                        <a href="#home" data-testid="footer-logo-link" className="flex items-center gap-3">
-                            <Logo className="h-11 w-11" />
-                            <span className="leading-tight">
-                                <span className="block font-display text-xl font-extrabold tracking-tight">
-                                    Khalaumba <span className="text-amber-warm">ICT</span>
-                                </span>
-                                <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-paper/60">
-                                    Est. 1993 · Bvumbwe, Thyolo
-                                </span>
+                        <a href="#home" data-testid="footer-logo-link" className="inline-block">
+                            <img
+                                src="/logo.png"
+                                alt="Khalaumba ICT logo"
+                                data-testid="footer-logo"
+                                className="h-16 w-auto rounded-lg"
+                            />
+                            <span className="mt-2 block font-mono text-[10px] uppercase tracking-[0.2em] text-paper/60">
+                                Est. 1993 · Bvumbwe, Thyolo
                             </span>
                         </a>
                         <p className="mt-6 max-w-sm text-sm leading-relaxed text-paper/65">

@@ -79,7 +79,7 @@ export default function RequestForm() {
                     <Reveal delay={0.1} className="lg:col-span-7">
                         <form
                             onSubmit={submit}
-                            className="rounded-2xl border border-sandline bg-white p-7 shadow-[0_20px_50px_-24px_rgba(27,59,43,0.18)] sm:p-9"
+                            className="rounded-2xl border border-sandline bg-white p-7 shadow-[0_20px_50px_-24px_rgba(65,118,188,0.25)] sm:p-9"
                             data-testid="design-request-form"
                         >
                             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

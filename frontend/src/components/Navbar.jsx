@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Logo from "./Logo";
 import { BRAND } from "../data";
 
 const LINKS = [
@@ -27,21 +26,19 @@ export default function Navbar() {
         <header
             className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
                 scrolled || open
-                    ? "bg-paper/90 shadow-[0_1px_0_rgba(27,59,43,0.1)] backdrop-blur-md"
+                    ? "bg-paper/90 shadow-[0_1px_0_rgba(65,118,188,0.15)] backdrop-blur-md"
                     : "bg-transparent"
             }`}
         >
             <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
-                <a href="#home" data-testid="nav-home-link" className="flex items-center gap-3">
-                    <Logo className="h-10 w-10" />
-                    <span className="leading-tight">
-                        <span className="block font-display text-lg font-extrabold tracking-tight text-forest">
-                            Khalaumba <span className="text-clay">ICT</span>
-                        </span>
-                        <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
-                            Est. 1993 · Thyolo, Malawi
-                        </span>
-                    </span>
+                <a href="#home" data-testid="nav-home-link" className="flex items-center">
+                    <img
+                        src="/logo.png"
+                        alt="Khalaumba ICT logo"
+                        data-testid="nav-logo"
+                        className="h-13 w-auto rounded-lg"
+                        style={{ height: "52px" }}
+                    />
                 </a>
 
                 <div className="hidden items-center gap-7 lg:flex">

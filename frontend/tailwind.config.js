@@ -20,18 +20,18 @@ module.exports = {
           DEFAULT: '#FFFFFF',
           foreground: '#1A2421'
         },
-        ink: '#1A2421',
-        muted: '#52635B',
+        ink: '#1B2430',
+        muted: '#5A6678',
         forest: {
-          DEFAULT: '#1B3B2B',
-          emerald: '#275B42',
-          deep: '#132A1F'
+          DEFAULT: '#4176BC',
+          emerald: '#6E9BD3',
+          deep: '#2A4E80'
         },
         clay: '#C85A32',
         amber: {
           warm: '#D99B26'
         },
-        sandline: 'rgba(27, 59, 43, 0.12)',
+        sandline: 'rgba(65, 118, 188, 0.16)',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

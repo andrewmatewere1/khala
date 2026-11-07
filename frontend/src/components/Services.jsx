@@ -38,8 +38,8 @@ export default function Services() {
                                     data-testid={`service-card-${s.id}`}
                                     className={`group flex h-full flex-col rounded-2xl p-8 transition-all duration-300 ${
                                         dark
-                                            ? "bg-forest text-paper hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(19,42,31,0.5)]"
-                                            : "border border-sandline bg-white hover:-translate-y-1 hover:border-clay/40 hover:shadow-[0_16px_36px_-16px_rgba(27,59,43,0.18)]"
+                                            ? "bg-forest text-paper hover:-translate-y-1 hover:shadow-[0_20px_40px_-16px_rgba(42,78,128,0.5)]"
+                                            : "border border-sandline bg-white hover:-translate-y-1 hover:border-clay/40 hover:shadow-[0_16px_36px_-16px_rgba(65,118,188,0.25)]"
                                     }`}
                                 >
                                     <div className="flex items-start justify-between">

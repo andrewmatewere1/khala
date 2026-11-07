@@ -42,7 +42,7 @@ export default function SignalMesh({ className = "" }) {
                     const b = nodes[j];
                     const d = Math.hypot(a.x - b.x, a.y - b.y);
                     if (d < 140) {
-                        ctx.strokeStyle = `rgba(27,59,43,${(1 - d / 140) * 0.14})`;
+                        ctx.strokeStyle = `rgba(65,118,188,${(1 - d / 140) * 0.16})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(a.x, a.y);
@@ -52,7 +52,7 @@ export default function SignalMesh({ className = "" }) {
                 }
             }
             nodes.forEach((n) => {
-                ctx.fillStyle = "rgba(27,59,43,0.32)";
+                ctx.fillStyle = "rgba(65,118,188,0.35)";
                 ctx.beginPath();
                 ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
                 ctx.fill();
