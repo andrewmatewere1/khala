@@ -27,6 +27,16 @@ export default function Hero() {
 
     return (
         <section id="home" ref={ref} className="grain relative overflow-hidden pb-20 pt-32 lg:pb-28 lg:pt-40">
+            <div className="absolute inset-0">
+                <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=srgb&fm=jpg&q=85&w=1600"
+                    alt=""
+                    aria-hidden="true"
+                    className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-paper/75" />
+                <div className="absolute inset-0 bg-gradient-to-r from-paper/95 via-paper/70 to-paper/40" />
+            </div>
             <motion.div style={{ y: meshY }} className="absolute inset-0">
                 <SignalMesh className="h-full w-full opacity-70" />
             </motion.div>

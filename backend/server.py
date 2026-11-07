@@ -32,6 +32,7 @@ EMAIL_KEY = os.environ["EMERGENT_EMAIL_KEY"]
 EMAIL_FROM_NAME = os.environ["EMAIL_FROM_NAME"]
 EMAIL_REPLY_TO = os.environ.get("EMAIL_REPLY_TO")
 OWNER_EMAIL = os.environ.get("OWNER_EMAIL", "info@khalaumba.net")
+FORMSPREE_FORM_ID = os.environ.get("FORMSPREE_FORM_ID", "")
 
 INDEXES: dict[str, list[IndexModel]] = {
     "design_requests": [
@@ -163,6 +164,7 @@ class ContactSubmission(BaseModel):
     project_type: str
     budget: str
     message: str
+    honeypot: str = Field(default="", alias="_gotcha")
     created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
@@ -171,6 +173,35 @@ def _field_row(label: str, value: str) -> str:
             f'vertical-align:top">{escape(label)}</td>'
             f'<td style="padding:8px 12px;font-size:14px;color:#1A2421;font-weight:600">'
             f'{escape(value)}</td></tr>')
+
+
+async def send_via_formspree(submission: ContactSubmission) -> bool:
+    form_id = FORMSPREE_FORM_ID.strip().rstrip("/")
+    if "/" in form_id:
+        form_id = form_id.split("/")[-1]
+    endpoint = f"https://formspree.io/f/{form_id}"
+    payload = {
+        "name": submission.full_name,
+        "email": submission.contact_info if "@" in submission.contact_info else "",
+        "contact": submission.contact_info,
+        "project_type": submission.project_type,
+        "budget": submission.budget,
+        "message": submission.message,
+        "_subject": f"New design request from {submission.full_name}",
+        "submitted_at": submission.created_at,
+    }
+    try:
+        async with httpx.AsyncClient(timeout=15) as http:
+            resp = await http.post(
+                endpoint,
+                json=payload,
+                headers={"Accept": "application/json", "Content-Type": "application/json"},
+            )
+        resp.raise_for_status()
+        return True
+    except Exception as e:
+        logging.getLogger(__name__).error(f"Formspree send failed: {str(e)}")
+        return False
 
 
 @api_router.get("/")
@@ -216,18 +247,22 @@ async def submit_contact(input: ContactSubmission):
         '</td></tr></table></td></tr></table>')
 
     email_sent = True
-    try:
-        await send_email(
-            to=OWNER_EMAIL,
-            subject=f"New design request from {full_name}",
-            html=html,
-            reply_to=EMAIL_REPLY_TO,
-        )
-    except HTTPException as e:
-        email_sent = False
-        logging.getLogger(__name__).warning(f"Contact saved but email not sent: {e.detail}")
+    if FORMSPREE_FORM_ID:
+        email_sent = await send_via_formspree(submission)
+    else:
+        try:
+            await send_email(
+                to=OWNER_EMAIL,
+                subject=f"New design request from {full_name}",
+                html=html,
+                reply_to=EMAIL_REPLY_TO,
+            )
+        except HTTPException as e:
+            email_sent = False
+            logging.getLogger(__name__).warning(f"Contact saved but email not sent: {e.detail}")
 
-    return {"status": "success", "id": submission.id, "email_sent": email_sent}
+    return {"status": "success", "id": submission.id, "email_sent": email_sent,
+            "delivered_via": "formspree" if FORMSPREE_FORM_ID else "email"}
 
 
 app.include_router(api_router)

@@ -13,7 +13,7 @@ const STEPS = [
     { icon: PhoneCall, text: "Our engineers contact you to plan the installation" },
 ];
 
-const initialForm = { full_name: "", contact_info: "", project_type: "", budget: "", message: "" };
+const initialForm = { full_name: "", contact_info: "", project_type: "", budget: "", message: "", _gotcha: "" };
 
 const inputCls =
     "w-full rounded-xl border border-sandline bg-paper px-4 py-3.5 text-sm text-ink outline-none transition-all placeholder:text-muted/60 focus:border-forest focus:ring-2 focus:ring-forest/15";
@@ -168,6 +168,17 @@ export default function RequestForm() {
                                     />
                                 </div>
                             </div>
+
+                            <input
+                                type="text"
+                                name="_gotcha"
+                                value={form._gotcha || ""}
+                                onChange={set("_gotcha")}
+                                tabIndex={-1}
+                                autoComplete="off"
+                                aria-hidden="true"
+                                className="absolute -left-[9999px] h-px w-px overflow-hidden"
+                            />
 
                             <button
                                 type="submit"

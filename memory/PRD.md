@@ -27,6 +27,13 @@ Build a portfolio site for an IT service company "Khalaumba ICT" with home, team
 - Design Request Form: name, phone/email, project type, budget, message → POST /api/contact → MongoDB + email to info@khalaumba.net; sonner success/error toasts
 - Footer: quick actions (6), contact column, socials, license line
 
+## Updates (2026-11-07)
+- Floating WhatsApp chat button (wa.me/265999270004, pre-filled enquiry message).
+- User's own logo (logo.png + K-mark favicon.png) replaced the custom SVG mark; whole palette switched from forest green to the logo's blue family (#4176BC primary, #2A4E80 deep).
+- Hero now has a full-bleed IT background photo (server room) behind the headline with a paper overlay + animated signal mesh.
+- Brand-styled thin scrollbar.
+- Design request form delivery switched to Formspree (FORMSPREE_FORM_ID secret; backend accepts bare ID or full endpoint URL). Managed-email delivery kept as fallback when the ID is absent. Honeypot anti-spam field added. Verified end-to-end: email_sent=true, delivered_via=formspree.
+
 ## Verified
 - curl POST /api/contact → {"status":"success","email_sent":true}
 - Screenshots desktop 1440 & mobile 390: no overflow-x, mobile menu functional, all sections render
