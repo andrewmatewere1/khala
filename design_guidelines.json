@@ -1,0 +1,212 @@
+{
+  "brand": {
+    "name": "Khalaumba ICT",
+    "tagline": "Enterprise Connectivity & Network Engineering from the Heart of Malawi",
+    "established": 1993,
+    "license_number": "License 16492",
+    "location": "Bvumbwe, Thyolo, Malawi",
+    "contact": {
+      "address": "P.O. Box 140, Bvumbwe, Thyolo, Malawi",
+      "phones": ["+265 999 270 004", "+265 882 000 455"],
+      "email": "info@khalaumba.net",
+      "primary_consultant": "Victor Marobe (victor@khalaumba.net)"
+    },
+    "social_links": {
+      "facebook": "https://facebook.com/khalaumbaict",
+      "twitter": "https://x.com/khalaumbaict",
+      "instagram": "https://instagram.com/khalaumbaict"
+    }
+  },
+  "aesthetic_archetype": {
+    "style": "Warm Local-Business Heritage meets Clean Modern Corporate",
+    "vibe": "Tactile warm off-white paper base, deep Shire Highlands forest green, burnt terracotta warmth, precision Swiss grid structure, non-generic typography. Absolutely NO purple gradients, NO Inter/Roboto defaults.",
+    "theme_mode": "Light mode primary with warm paper texture feel, dark moss green secondary surfaces for high-contrast callouts"
+  },
+  "typography": {
+    "fonts": {
+      "heading_font": "'Outfit', 'Cabinet Grotesk', sans-serif",
+      "body_font": "'IBM Plex Sans', 'DM Sans', sans-serif",
+      "mono_font": "'JetBrains Mono', monospace"
+    },
+    "font_imports": [
+      "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    ],
+    "scale": {
+      "hero_heading": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08]",
+      "section_heading": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#1B3B2B]",
+      "card_heading": "text-lg sm:text-xl font-semibold text-[#1B3B2B]",
+      "body_text": "text-base text-[#2A3439] leading-relaxed",
+      "caption": "text-xs uppercase tracking-[0.2em] font-mono text-[#8C6D46]"
+    }
+  },
+  "colors": {
+    "background_primary": "#FBF9F5",
+    "background_secondary": "#F3EFE6",
+    "surface_card": "#FFFFFF",
+    "surface_dark": "#132A1F",
+    "text_primary": "#1A2421",
+    "text_muted": "#52635B",
+    "brand_green_deep": "#1B3B2B",
+    "brand_green_emerald": "#275B42",
+    "brand_terracotta": "#C85A32",
+    "brand_amber_warm": "#D99B26",
+    "border_light": "rgba(27, 59, 43, 0.12)",
+    "border_dark": "rgba(255, 255, 255, 0.15)",
+    "shadow_soft": "0 10px 30px -5px rgba(27, 59, 43, 0.05), 0 4px 12px -2px rgba(200, 90, 50, 0.03)"
+  },
+  "image_urls": {
+    "server_rack_technician": "https://images.unsplash.com/photo-1629837093109-11325d6e7afd?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "server_equipment_cabling": "https://images.unsplash.com/photo-1785682231847-93265d8e633d?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "technician_working": "https://images.unsplash.com/photo-1785682117028-6fcf2c0b515b?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "tea_estate_landscape_1": "https://images.unsplash.com/photo-1759335242090-e3e18bfd6279?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "tea_estate_landscape_2": "https://images.unsplash.com/photo-1786519249202-4a20bcad5a84?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "tea_estate_misty": "https://images.unsplash.com/photo-1771149149933-b1242e80a4ad?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "logo_design": {
+    "type": "Custom SVG Signal-Node Network Motif",
+    "symbol": "Triangular network mesh connecting 3 nodes with a central Starlink/Satellite pulse signal and green/terracotta nodes",
+    "usage": "Used in Header nav, Footer, Hero watermarks, and Favicon SVG generation"
+  },
+  "key_features_and_components": {
+    "navigation": {
+      "type": "Sticky Glass Header",
+      "style": "bg-[#FBF9F5]/90 backdrop-blur-md border-b border-[#1B3B2B]/10 z-50",
+      "items": [
+        {"label": "Home", "href": "#home"},
+        {"label": "Services", "href": "#services"},
+        {"label": "Past Projects", "href": "#projects"},
+        {"label": "Team", "href": "#team"},
+        {"label": "Contact Us", "href": "#contact"},
+        {"label": "Request Proposal", "href": "#request-form", "is_cta": true}
+      ]
+    },
+    "hero_section": {
+      "headline": "31 Years of Precision IT Infrastructure & Network Consultancy for Malawi",
+      "tagline": "License 16492 • Est. 1993 • Bvumbwe, Thyolo",
+      "description": "From Satemwa's tea hills to Blantyre's enterprise towers, Khalaumba ICT delivers high-availability Starlink connectivity, AI-driven CCTV surveillance, structured fiber cabling, and hardened enterprise networks.",
+      "effects": "Kinetic line-by-line reveal animation using framer-motion, subtle interactive 3D signal mesh canvas, quick metric badges (31+ Years Experience, 100+ Enterprise Installations, 99.9% Uptime Guarantee)"
+    },
+    "marquee": {
+      "type": "Editorial Warm Ribbon",
+      "text_items": [
+        "ESTABLISHED 1993",
+        "MALAWIAN REGULATED LICENSE 16492",
+        "STARLINK ENTERPRISE INSTALLATIONS",
+        "AI LICENSE-PLATE RECOGNITION CCTV",
+        "STRUCTURED CABLING & SMART UPS",
+        "VPN & FIREWALL HARDENING",
+        "GPS & FUEL FLEET MONITORING"
+      ]
+    },
+    "services_bento_grid": {
+      "mode": "High-Impact Asymmetric Bento Grid",
+      "services_list": [
+        {"id": "starlink", "title": "Starlink & High-Speed Satellite Internet", "category": "Connectivity", "featured": true},
+        {"id": "cctv", "title": "CCTV & AI License-Plate Camera Systems", "category": "Security", "featured": true},
+        {"id": "cabling", "title": "Structured Cabling & Heavy-Duty UPS", "category": "Infrastructure"},
+        {"id": "networks", "title": "Enterprise Networks, Firewalls & VPNs", "category": "Cybersecurity"},
+        {"id": "servers", "title": "Server Deployment & Virtualization", "category": "Systems"},
+        {"id": "gps_fuel", "title": "GPS Tracking & Fuel Monitoring", "category": "Telemetry"},
+        {"id": "vsat", "title": "VSAT Satellite Backhaul Systems", "category": "Connectivity"},
+        {"id": "pabx", "title": "IP PABX & Unified Telephony", "category": "Telecom"},
+        {"id": "access_control", "title": "Biometric Access Control & Turnstiles", "category": "Security"},
+        {"id": "software_web", "title": "Custom Web, Mobile & ERP Software", "category": "Development"},
+        {"id": "hosting", "title": "Cloud Hosting & Offsite Data Backups", "category": "Cloud"}
+      ]
+    },
+    "past_projects": {
+      "section_title": "Enterprise Case Studies & Prestigious Clients",
+      "clients": [
+        {
+          "name": "Satemwa Tea Estates",
+          "location": "Thyolo, Malawi",
+          "scope": "High-Density Fiber Backhaul, Factory CCTV & Remote Plantation Starlink Uplink",
+          "impact": "Seamless real-time monitoring across 1,000+ hectares of tea plantations."
+        },
+        {
+          "name": "Sun N Sand Holiday Resort",
+          "location": "Mangochi, Lake Malawi",
+          "scope": "Resort-Wide Guest Wi-Fi Mesh, IP PABX Telephony & Perimeter Security Cameras",
+          "impact": "Zero-deadzone wireless coverage for international tourists and conference guests."
+        },
+        {
+          "name": "Sunseed Oil Ltd",
+          "location": "Lilongwe / Blantyre",
+          "scope": "Factory Automation Network, AI License Plate CCTV at Gates & Fuel Fleet Telemetry",
+          "impact": "100% automated gate logging and 18% reduction in fleet fuel variance."
+        },
+        {
+          "name": "Rainbow Paints",
+          "location": "Blantyre, Malawi",
+          "scope": "Multi-Branch Secure VPN Mesh, Datacenter Server Racks & UPS Power Redundancy",
+          "impact": "Sub-10ms inter-branch transaction sync across retail outlets nationwide."
+        },
+        {
+          "name": "Blantyre International University (BIU)",
+          "location": "Blantyre, Malawi",
+          "scope": "Campus-Wide Structured Fiber Optic Backbone & Student Lab Server Infrastructure",
+          "impact": "Empowering 2,500+ students with high-speed academic research access."
+        }
+      ]
+    },
+    "team_section": {
+      "title": "Engineers Rooted in Malawi's Technological Growth",
+      "members": [
+        {
+          "name": "Victor Marobe",
+          "role": "Principal IT Consultant & Founder",
+          "experience": "30+ years in network engineering and infrastructure leadership in Malawi.",
+          "email": "victor@khalaumba.net"
+        },
+        {
+          "name": "Chifundo Banda",
+          "role": "Lead Network & Security Systems Engineer",
+          "experience": "Specialist in AI CCTV, Starlink installations, and enterprise firewall routing."
+        },
+        {
+          "name": "Tiyanjane Moyo",
+          "role": "Field Infrastructure & Cabling Supervisor",
+          "experience": "Expert in structured fiber optics, heavy UPS systems, and site surveys."
+        }
+      ]
+    },
+    "design_request_form": {
+      "type": "Interactive ICT Solution Estimator & Proposal Request Form",
+      "fields": [
+        {"name": "full_name", "type": "text", "label": "Full Name", "required": true},
+        {"name": "contact_info", "type": "text", "label": "Email Address or Phone (+265...)", "required": true},
+        {"name": "organization", "type": "text", "label": "Company / Estate / Organization Name", "required": false},
+        {
+          "name": "project_type",
+          "type": "select",
+          "label": "Required Service",
+          "options": [
+            "Starlink & Satellite Broadband",
+            "CCTV & AI Security Surveillance",
+            "Structured Cabling & Server Racks",
+            "Enterprise Network / VPN / Firewall",
+            "GPS Fleet & Fuel Telemetry",
+            "IP PABX & Access Control",
+            "Custom Software & Web Development",
+            "Full Infrastructure Consultancy"
+          ]
+        },
+        {"name": "budget_range", "type": "range", "label": "Estimated Budget (MWK or USD)", "default": "$1,000 - $5,000"},
+        {"name": "requirements_detail", "type": "textarea", "label": "Project Requirements & Site Location", "required": true}
+      ],
+      "submission_handler": "Instant validation with Sonner toast notification and interactive quote summary preview"
+    }
+  },
+  "testing_requirements": {
+    "data_testid_rules": "All interactive elements (buttons, nav links, inputs, selects, form submit, service cards, contact links) MUST have explicit kebab-case data-testid attributes (e.g. data-testid='nav-services-link', data-testid='submit-proposal-btn', data-testid='contact-phone-1')."
+  },
+  "instructions_for_main_agent": [
+    "1. Read all component guidelines and use pure React JS with Tailwind CSS + Framer Motion + Lucide-react.",
+    "2. Keep the warm paper palette (#FBF9F5 base, #1B3B2B deep green, #C85A32 burnt terracotta accent) and non-generic fonts (Outfit + IBM Plex Sans).",
+    "3. Build a fully functional single-page layout or multi-tab application with smooth scroll sections (#home, #services, #projects, #team, #contact, #request-form).",
+    "4. Ensure every card and interactive component has appropriate hover state effects and data-testid attributes.",
+    "5. Include a floating interactive Design Request Form / Quote Estimator that computes estimated installation turnaround time.",
+    "6. Use Sonner toasts for form submissions and copy-to-clipboard contact actions.",
+    "7. Create custom SVG graphics for the network node logo and Starlink/CCTV technical diagrams."
+  ]
+}
