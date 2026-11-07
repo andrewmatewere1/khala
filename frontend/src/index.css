@@ -46,6 +46,24 @@
         background: #c85a32;
         color: #fbf9f5;
     }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f3efe6;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #4176bc;
+        border-radius: 8px;
+        border: 2px solid #f3efe6;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #2a4e80;
+    }
+    html {
+        scrollbar-color: #4176bc #f3efe6;
+        scrollbar-width: thin;
+    }
 }
 
 @layer utilities {
