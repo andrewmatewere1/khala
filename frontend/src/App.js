@@ -13,6 +13,7 @@ import Team from "./components/Team";
 import Contact from "./components/Contact";
 import RequestForm from "./components/RequestForm";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
     useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
                     <RequestForm />
                 </main>
                 <Footer />
+                <WhatsAppButton />
                 <Toaster position="bottom-right" richColors closeButton />
             </div>
         </ErrorBoundary>
