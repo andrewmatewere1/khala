@@ -8,7 +8,7 @@ export const BRAND = {
     phoneHrefs: ["tel:+265999270004", "tel:+265882000455"],
     email: "info@khalaumba.net",
     socials: {
-        facebook: "https://facebook.com/khalaumbaict",
+        facebook: "https://www.facebook.com/share/1CTHyj7XvW/",
         x: "https://x.com/khalaumbaict",
         instagram: "https://instagram.com/khalaumbaict",
     },
